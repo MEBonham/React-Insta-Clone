@@ -4,7 +4,7 @@ import "./SearchBar.css";
 
 const SearchBar = props => {
     return (
-        <header>
+        <header className="search">
             <div className="home">
                 <h1>Instagram</h1>
             </div>

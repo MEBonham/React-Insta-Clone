@@ -7,8 +7,15 @@ import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
     return (
-        <div class="post">
+        <div className="post">
+            <header>
+                <img className="thumb" src={props.item.thumbnailUrl} alt="user icon" />
+                <h2>{props.item.username}</h2>
+            </header>
             <img className="postPic" src={props.item.imageUrl} alt="picture" />
+            <div className="icons">
+            </div>
+            <p>{props.item.likes} likes</p>
             <CommentSection arr={props.item.comments} />
         </div>
     );
@@ -17,6 +24,7 @@ const PostContainer = props => {
 PostContainer.propTypes = {
     item: PropTypes.shape({
         username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
         imageUrl: PropTypes.string,
         likes: PropTypes.number,
         timestamp: PropTypes.string,
