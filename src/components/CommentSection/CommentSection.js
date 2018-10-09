@@ -10,6 +10,9 @@ const CommentSection = props => {
             {arr.map(comment => 
                 <p><strong>{comment.username}</strong> {comment.text}</p>
             )}
+            <form onSubmit={props.submit}>
+                <input type="text" placeholder="Add a comment..." />
+            </form>
         </div>
     );
 };
